@@ -8,6 +8,7 @@ A feedforward neural network is implemented using Keras.
 ```bash
 model = Sequential()
 ```
+**Tech Stack: Python, Scikit-learn, TensorFlow/Keras, Artificial Neural Networks (ANN), Adam Optimizer, One-Hot Encoding, Model Evaluation, and Automated Report Generation.**
 
 **Expected Output**
 
