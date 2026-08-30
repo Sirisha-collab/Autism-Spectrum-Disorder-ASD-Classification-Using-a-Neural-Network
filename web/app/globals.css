@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme {
+  /* Clinical eucalyptus palette. Ochre is reserved for an elevated result —
+     never red, because a screening flag is a prompt, not bad news. */
+  --color-ink: #14232b;
+  --color-ink-soft: #3d5259;
+  --color-muted: #6d8288;
+  --color-paper: #eaefec;
+  --color-card: #fbfcfb;
+  --color-line: #cfdad4;
+  --color-accent: #2f6f62;
+  --color-accent-soft: #dceae4;
+  --color-flag: #a9741f;
+  --color-flag-soft: #f5ead4;
+
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body: "Public Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-variation-settings: "SOFT" 20, "WONK" 1;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+
+/* Eyebrow labels: the instrument's own vocabulary, set in the data face. */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* --- Signature: the item ledger ---------------------------------------- */
+.ledger-cell {
+  font-family: var(--font-mono);
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-line);
+  background: var(--color-card);
+  color: var(--color-muted);
+  aspect-ratio: 1;
+  font-size: 0.75rem;
+  border-radius: 3px;
+  transition: background-color 180ms ease, color 180ms ease,
+    border-color 180ms ease, transform 180ms ease;
+}
+
+.ledger-cell[data-state="scored"] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.ledger-cell[data-state="zero"] {
+  background: var(--color-accent-soft);
+  border-color: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.ledger-cell[data-state="active"] {
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+
+/* --- Option buttons ----------------------------------------------------- */
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.7rem 0.9rem;
+  border: 1px solid var(--color-line);
+  border-radius: 6px;
+  background: var(--color-card);
+  color: var(--color-ink-soft);
+  font-size: 0.9375rem;
+  cursor: pointer;
+  transition: border-color 140ms ease, background-color 140ms ease;
+}
+
+.option:hover {
+  border-color: var(--color-accent);
+}
+
+.option[aria-pressed="true"] {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+  color: var(--color-ink);
+}
+
+.option-key {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  min-width: 1.25rem;
+  color: var(--color-muted);
+}
+
+.option[aria-pressed="true"] .option-key {
+  color: var(--color-accent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    scroll-behavior: auto;
+  }
+}
+
+/* Screen-reader-only utility for live regions that are usually silent. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Parents take the result sheet to an appointment. Make it print cleanly. */
+@media print {
+  body {
+    background: #fff;
+  }
+  header,
+  nav,
+  .print\:hidden {
+    display: none !important;
+  }
+  #result {
+    border: 1px solid #000 !important;
+    background: #fff !important;
+  }
+}

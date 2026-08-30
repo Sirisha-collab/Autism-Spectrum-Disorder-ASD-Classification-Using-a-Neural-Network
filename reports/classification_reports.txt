@@ -1,0 +1,87 @@
+
+=== Logistic Regression ===
+               precision    recall  f1-score   support
+
+No ASD traits       1.00      1.00      1.00        65
+   ASD traits       1.00      1.00      1.00       146
+
+     accuracy                           1.00       211
+    macro avg       1.00      1.00      1.00       211
+ weighted avg       1.00      1.00      1.00       211
+
+
+=== Decision Tree ===
+               precision    recall  f1-score   support
+
+No ASD traits       0.85      0.86      0.85        65
+   ASD traits       0.94      0.93      0.93       146
+
+     accuracy                           0.91       211
+    macro avg       0.89      0.90      0.89       211
+ weighted avg       0.91      0.91      0.91       211
+
+
+=== Random Forest ===
+               precision    recall  f1-score   support
+
+No ASD traits       0.97      0.92      0.94        65
+   ASD traits       0.97      0.99      0.98       146
+
+     accuracy                           0.97       211
+    macro avg       0.97      0.95      0.96       211
+ weighted avg       0.97      0.97      0.97       211
+
+
+=== Gradient Boosting ===
+               precision    recall  f1-score   support
+
+No ASD traits       0.95      0.97      0.96        65
+   ASD traits       0.99      0.98      0.98       146
+
+     accuracy                           0.98       211
+    macro avg       0.97      0.97      0.97       211
+ weighted avg       0.98      0.98      0.98       211
+
+
+=== AdaBoost ===
+               precision    recall  f1-score   support
+
+No ASD traits       1.00      1.00      1.00        65
+   ASD traits       1.00      1.00      1.00       146
+
+     accuracy                           1.00       211
+    macro avg       1.00      1.00      1.00       211
+ weighted avg       1.00      1.00      1.00       211
+
+
+=== SVM (RBF) ===
+               precision    recall  f1-score   support
+
+No ASD traits       1.00      1.00      1.00        65
+   ASD traits       1.00      1.00      1.00       146
+
+     accuracy                           1.00       211
+    macro avg       1.00      1.00      1.00       211
+ weighted avg       1.00      1.00      1.00       211
+
+
+=== K-Nearest Neighbours ===
+               precision    recall  f1-score   support
+
+No ASD traits       0.87      1.00      0.93        65
+   ASD traits       1.00      0.93      0.96       146
+
+     accuracy                           0.95       211
+    macro avg       0.93      0.97      0.95       211
+ weighted avg       0.96      0.95      0.95       211
+
+
+=== Naive Bayes ===
+               precision    recall  f1-score   support
+
+No ASD traits       0.38      0.98      0.55        65
+   ASD traits       0.98      0.29      0.45       146
+
+     accuracy                           0.51       211
+    macro avg       0.68      0.64      0.50       211
+ weighted avg       0.79      0.51      0.48       211

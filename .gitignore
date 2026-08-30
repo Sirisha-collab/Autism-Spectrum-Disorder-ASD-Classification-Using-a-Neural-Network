@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+venv/
+models/*.joblib
+reports/*.png
+reports/*.csv
+data/*.csv
+!data/sample_synthetic.csv

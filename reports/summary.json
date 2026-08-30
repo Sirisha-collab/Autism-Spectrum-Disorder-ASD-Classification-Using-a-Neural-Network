@@ -1,0 +1,23 @@
+{
+  "best_model": "Logistic Regression",
+  "metrics": {
+    "Accuracy": 1.0,
+    "Balanced Acc": 1.0,
+    "Precision": 1.0,
+    "Recall (Sensitivity)": 1.0,
+    "F1": 1.0,
+    "MCC": 1.0,
+    "Specificity": 1.0,
+    "ROC-AUC": 1.0,
+    "TP": 146.0,
+    "FP": 0.0,
+    "TN": 65.0,
+    "FN": 0.0,
+    "CV F1 (mean)": 1.0,
+    "CV F1 (std)": 0.0
+  },
+  "leakage_column_dropped": true,
+  "behaviour_items_dropped": false,
+  "n_train": 843,
+  "n_test": 211
+}
