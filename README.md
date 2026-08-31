@@ -1,7 +1,4 @@
-# Autism Screening — ML Model Comparison + Q-CHAT-10 Questionnaire
-
-It trains and compares eight classifiers, produces a full metrics report with plots, and ships an interactive questionnaire that runs the trained model on a new child's answers.
----
+# Autism Screening — ML Model Comparison + CHAT-10 Questionnaire
 
 ## 1. Project layout
 
